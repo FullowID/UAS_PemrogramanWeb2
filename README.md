@@ -8,7 +8,7 @@
 
 ## Anggota:
 - Muhammad Ammarin Ihsan
-- Muhammad Fatur Rahman
+- Fatur Rahman
 
 ## Framework yang Dipakai
 
