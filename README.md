@@ -7,8 +7,9 @@
 </p>
 
 ## Anggota:
-- Muhammad Ammarin Ihsan
 - Fatur Rahman
+- Muhammad Ammarin Ihsan
+
 
 ## Framework yang Dipakai
 
