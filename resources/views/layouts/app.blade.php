@@ -20,7 +20,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
+    <div id="app" class="bg-dark bg-gradient">
         <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -75,9 +75,36 @@
             </div>
         </nav>
 
-        <main class="py-0">
             @yield('content')
-        </main>
+
+            <div class="container text-white">
+                <footer class="py-4 my-2">
+                    <div class="row text-center border-bottom  row-colls-3 justify-content-center align-item-center">
+                        <div class="col">
+                            <h5>Nama Kelompok</h5>
+                            <ul class="justify-content-center text-center nav mt-3 pb-3">
+                                <li class="nav-item mb-1">
+                                    <p class="p-0 text-muted">Fatur Rahman</p>
+                                    <p class="p-0 text-muted">Muhammad Ammarin Ihsan</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col"></div>
+                        <div class="col">
+                            <h5>Framework</h5>
+                            <ul class="justify-content-center text-center nav mt-3 pb-3">
+                                <li class="nav-item mb-1">
+                                    <p class="p-0 text-muted">Laravel</p>
+                                    <p class="p-0 text-muted">Bootstrap</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                        <p class="mt-3 text-center text-muted">© 2022 </p>
+                    
+                    
+                </footer>
+            </div>
     </div>
 </body>
 </html>
