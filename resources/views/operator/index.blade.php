@@ -1,13 +1,13 @@
-@extends('layouts.app_bs')
+@extends('layouts.app')
 @section('content')
 
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Laravel 9 CRUD Example from scratch </h2>
+                <h2>Operator</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('operator_class.create') }}"> Create New Class</a>
+                <a class="btn btn-success" href="{{ route('operator.create') }}"> Create New Class</a>
             </div>
         </div>
     </div>
@@ -18,22 +18,22 @@
         </div>
     @endif
 
-    <table class="table table-bordered">
+    <table class="table table-bordered text-white">
         <tr>
-            <th>Name</th>
-            <th>Position</th>
+            <th>Codename</th>
+            <th>Class</th>
             <th>Description</th>
             <th>Action</th>
         </tr>
-        @foreach ($operator_class as $opClass)
+        @foreach ($operator as $item)
         <tr>
-            <td>{{ $opClass->classname }}</td>
-            <td>{{ $opClass->position }}</td>
-            <td>{{ $opClass->description }}</td>
+            <td>{{ $item->codename}}</td>
+            <td>{{ optional($item->operatorClass)->classname}}</td>
+            <td>{{ $item->description }}</td>
             <td>
-                 <a class="btn btn-info" href="{{ route('operator_class.show',$opClass->id) }}">Show</a>
-                    <a class="btn btn-primary" href="{{ route('operator_class.edit',$opClass->id) }}">Edit</a>
-                <form action="{{ route('operator_class.destroy',$opClass->id) }}" method="POST">
+                 <a class="btn btn-info" href="{{ route('operator.show',$item->id) }}">Show</a>
+                    <a class="btn btn-primary" href="{{ route('operator.edit',$item->id) }}">Edit</a>
+                <form action="{{ route('operator.destroy',$item->id) }}" method="POST">
    
                     @csrf
                     @method('DELETE')

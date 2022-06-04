@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 use App\Models\OperatorClass;
 
 use Illuminate\Http\Request;
-use PHPUnit\Framework\Constraint\Operator;
 
 class OperatorClassController extends Controller
 {
@@ -17,7 +16,7 @@ class OperatorClassController extends Controller
     {
         $operator_class = OperatorClass::all();
 
-        return view('operator.index', compact('operator_class'));
+        return view('operatorclass.index', compact('operator_class'));
     }
 
     /**
@@ -27,7 +26,7 @@ class OperatorClassController extends Controller
      */
     public function create()
     {
-       return view('operator.create');
+       return view('operatorclass.create');
     }
 
     /**
@@ -45,7 +44,7 @@ class OperatorClassController extends Controller
 
         OperatorClass::create($request->all());
 
-        return redirect()->route('operator.index')->with('success','operator class created successfully.');
+        return redirect()->route('operator_class.index')->with('success','operator class created successfully.');
     }
 
     /**
@@ -56,7 +55,7 @@ class OperatorClassController extends Controller
      */
     public function show(OperatorClass $operator_class)
     {
-      return view('operator.show',compact('operator_class'));
+      return view('operatorclass.show',compact('operator_class'));
     }
 
     /**
@@ -67,7 +66,7 @@ class OperatorClassController extends Controller
      */
     public function edit(OperatorClass $operator_class)
     {
-        return view('operator.edit',compact('operator_class'));
+        return view('operatorclass.edit',compact('operator_class'));
     }
 
     /**
@@ -86,7 +85,7 @@ class OperatorClassController extends Controller
 
         $operator_class->update($request->all());
 
-        return redirect()->route('operator.index')->with('success','Operator Class updated successfully');
+        return redirect()->route('operator_class.index')->with('success','Operator Class updated successfully');
     }
 
     /**

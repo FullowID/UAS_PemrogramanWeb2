@@ -1,52 +1,47 @@
 @extends('layouts.app')
-
-
 @section('content')
 
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="{{url('/images/slide1.jpg')}}" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
-      </div>
+    <div class="row">
+        <div class="col-lg-12 margin-tb">
+            <div class="pull-left">
+                <h2>Operator Class</h2>
+            </div>
+            <div class="pull-right">
+                <a class="btn btn-success" href="{{ route('operator_class.create') }}"> Create New Class</a>
+            </div>
+        </div>
     </div>
-    <div class="carousel-item">
-      <img src="{{url('/images/slide2.jpg')}}" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="{{url('/images/slide3.jpg')}}" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
 
-<div class="d-flex" style="height: 200px;"></div>
+    @if ($message = Session::get('success'))
+        <div class="alert alert-success">
+            <p>{{ $message }}</p>
+        </div>
+    @endif
 
-  @foreach ($daftar_operator_class as $operatorclass)
-    <h4>Nama: {{$operatorclass->nama_class}}</h4>
-    <h4>Nama: {{$operatorclass->position}}</h4>
-    <hr>
-  @endforeach
+    <table class="table table-bordered text-white">
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Description</th>
+            <th>Action</th>
+        </tr>
+        @foreach ($operator_class as $item)
+        <tr>
+            <td>{{ $item->classname}}</td>
+            <td>{{ $item->position }}</td>
+            <td>{{ $item->description }}</td>
+            <td>
+                 <a class="btn btn-info" href="{{ route('operator_class.show',$item->id) }}">Show</a>
+                    <a class="btn btn-primary" href="{{ route('operator_class.edit',$item->id) }}">Edit</a>
+                <form action="{{ route('operator_class.destroy',$item->id) }}" method="POST">
+   
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </td>
+        </tr>
+        @endforeach
+    </table>
+
 @endsection

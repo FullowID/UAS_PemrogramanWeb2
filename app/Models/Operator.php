@@ -9,8 +9,13 @@ class Operator extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'operator_classes_id',
+        
         'codename',
+        'operator_classes_id',
         'description'
     ];
+
+    public function operatorClass() {
+        return $this->belongsTo('App\Models\OperatorClass', 'operator_classes_id');
+    }
 }
