@@ -44,4 +44,9 @@
 
 <div class="d-flex" style="height: 200px;"></div>
 
+  @foreach ($daftar_operator_class as $operatorclass)
+    <h4>Nama: {{$operatorclass->nama_class}}</h4>
+    <h4>Nama: {{$operatorclass->position}}</h4>
+    <hr>
+  @endforeach
 @endsection
