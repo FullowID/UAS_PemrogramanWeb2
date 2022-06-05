@@ -12,10 +12,15 @@ class Operator extends Model
         
         'codename',
         'operator_classes_id',
+        'factions_id',
         'description'
     ];
 
     public function operatorClass() {
         return $this->belongsTo('App\Models\OperatorClass', 'operator_classes_id');
+    }
+
+    public function faction(){
+        return $this->belongsTo('App\Models\Faction', 'factions_id');
     }
 }

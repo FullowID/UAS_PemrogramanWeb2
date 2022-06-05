@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateOperatorsTable extends Migration
+class CreateFactionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateOperatorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('operators', function (Blueprint $table) {
+        Schema::create('factions', function (Blueprint $table) {
             $table->id();
-            $table->string('codename');
-            $table->foreignId('operator_classes_id')->constrained();
-            $table->foreignId('factions_id')->constrained();
-            $table->text('description');
+            $table->string('factionname')->unique();
+            $table->string('type');
+            $table->string('race');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateOperatorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('operator');
+        Schema::dropIfExists('factions');
     }
 }

@@ -26,5 +26,6 @@ Auth::routes();
 
 Route::resource('/operator_class', OperatorClassController::class);
 Route::resource('/operator', OperatorController::class);
+Route::resource('/faction', Faction::class);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
