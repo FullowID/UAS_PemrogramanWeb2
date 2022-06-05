@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\FactionController;
 use App\Http\Controllers\OperatorClassController;
 use App\Http\Controllers\OperatorController;
+use App\Http\Controllers\RaceController;
 use App\Models\Operator;
 use App\Models\OperatorClass;
 use Illuminate\Support\Facades\Auth;
@@ -26,6 +28,7 @@ Auth::routes();
 
 Route::resource('/operator_class', OperatorClassController::class);
 Route::resource('/operator', OperatorController::class);
-Route::resource('/faction', Faction::class);
+Route::resource('/faction', FactionController::class);
+Route::resource('/race', RaceController::class);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

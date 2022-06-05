@@ -13,6 +13,7 @@ class Operator extends Model
         'codename',
         'operator_classes_id',
         'factions_id',
+        'races_id',
         'description'
     ];
 
@@ -22,5 +23,9 @@ class Operator extends Model
 
     public function faction(){
         return $this->belongsTo('App\Models\Faction', 'factions_id');
+    }
+
+    public function race(){
+        return $this->belongsTo('App\Models\Race', 'races_id');
     }
 }

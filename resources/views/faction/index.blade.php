@@ -22,7 +22,7 @@
         <tr>
             <th>Faction Name</th>
             <th>Type</th>
-            <th>Race</th>
+            <th>Dominant Race</th>
             <th>Action</th>
         </tr>
         @foreach ($faction as $item)

@@ -18,6 +18,7 @@ class CreateOperatorsTable extends Migration
             $table->string('codename');
             $table->foreignId('operator_classes_id')->constrained();
             $table->foreignId('factions_id')->constrained();
+            $table->foreignId('races_id')->constrained();
             $table->text('description');
             $table->timestamps();
         });
@@ -30,6 +31,6 @@ class CreateOperatorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('operator');
+        Schema::dropIfExists('operators');
     }
 }

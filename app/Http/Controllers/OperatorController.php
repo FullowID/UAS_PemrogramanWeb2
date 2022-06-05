@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Operator;
+use App\Models\OperatorClass;
+use App\Models\Faction;
+use App\Models\Race;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class OperatorController extends Controller
 {
@@ -26,7 +30,11 @@ class OperatorController extends Controller
      */
     public function create()
     {
-       return view('operator.create');
+        $operator_class = OperatorClass::all();
+        $faction = Faction::all();
+        $race = Race::all();
+
+       return view('operator.create', compact('operator_class', 'faction', 'race'));
     }
 
     /**
@@ -38,8 +46,11 @@ class OperatorController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
-            'body' => 'required',
+            'codename' => 'required',
+            'operator_classes_id' => 'required',
+            'factions_id' => 'required',
+            'races_id' => 'required',
+            'description' => 'required'
         ]);
 
         Operator::create($request->all());
@@ -79,8 +90,11 @@ class OperatorController extends Controller
     public function update(Request $request, Operator $operator)
     {
         $request->validate([
-            'title' => 'required',
-            'body' => 'required',
+            'codename' => 'required',
+            'operator_classes_id' => 'required',
+            'factions_id' => 'required',
+            'races_id' => 'required',
+            'description' => 'required'
         ]);
 
         $operator->update($request->all());
