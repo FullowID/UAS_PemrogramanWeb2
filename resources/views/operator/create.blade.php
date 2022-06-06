@@ -40,8 +40,8 @@
             <div class="card">
                 <div class="card-body">
                     <div class="form-group">
-                        <strong>Codename:</strong>
-                        <input type="text" name="codename" class="form-control" placeholder="Operator Codename">
+                        <label for="codename" class="form-label">Codename:</label>
+                        <input type="text" name="codename" id="codename" class="form-control" placeholder="Operator Codename">
                     </div>
 
                     <div class="hstack gap-3 my-3">
@@ -84,4 +84,7 @@
         </div>
     </div>
 </form>
+
+<div class="d-flex" style="height: 100px;"></div>
+
 @endsection
