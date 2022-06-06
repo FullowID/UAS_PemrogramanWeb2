@@ -16,9 +16,9 @@ class CreateOperatorsTable extends Migration
         Schema::create('operators', function (Blueprint $table) {
             $table->id();
             $table->string('codename');
-            $table->foreignId('operator_classes_id')->constrained();
-            $table->foreignId('factions_id')->constrained();
-            $table->foreignId('races_id')->constrained();
+            $table->foreignId('operator_classes_id')->nullOnDelete()->constrained();
+            $table->foreignId('factions_id')->nullOnDelete()->constrained();
+            $table->foreignId('races_id')->nullOnDelete()->constrained();
             $table->text('description');
             $table->timestamps();
         });

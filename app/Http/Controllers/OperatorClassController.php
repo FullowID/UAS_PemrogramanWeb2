@@ -82,8 +82,9 @@ class OperatorClassController extends Controller
     public function update(Request $request, OperatorClass $operator_class)
     {
         $request->validate([
-            'title' => 'required',
-            'body' => 'required',
+            'classname' => 'required',
+            'position' => 'required',
+            'description' => 'required'
         ]);
 
         $operator_class->update($request->all());

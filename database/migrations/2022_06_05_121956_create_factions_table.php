@@ -17,7 +17,6 @@ class CreateFactionsTable extends Migration
             $table->id();
             $table->string('factionname')->unique();
             $table->string('type');
-            $table->string('race');
             $table->timestamps();
         });
     }
