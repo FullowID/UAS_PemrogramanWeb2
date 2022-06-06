@@ -41,41 +41,57 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-<div class="card">
-  <h5 class="card-header">Operator</h5>
-  <div class="card-body">
-    <h5 class="card-title">Operators of Terra</h5>
-    <p class="card-text">Notable characters of Arknights used in battle.</p>
-    <a href="#" class="btn btn-primary">Go</a>
-  </div>
-</div>
-<div class="card">
-  <h5 class="card-header">Classes</h5>
-  <div class="card-body">
-    <h5 class="card-title">Division of Operators</h5>
-    <p class="card-text">Eight main classes of operators in Arknights.</p>
-    <a href="#" class="btn btn-primary">Go</a>
-  </div>
-</div>
-<div class="card">
-  <h5 class="card-header">Race</h5>
-  <div class="card-body">
-    <h5 class="card-title">Inhabitant's Races in Terra</h5>
-    <p class="card-text">Terra is populated by various races, while some races may be unidentified.</p>
-    <a href="#" class="btn btn-primary">Go</a>
-  </div>
-</div>
-<div class="card">
-  <h5 class="card-header">Faction</h5>
-  <div class="card-body">
-    <h5 class="card-title">Various Faction in the World of Terra</h5>
-    <p class="card-text">Terra is comprised of several factions, whether nation-states, corporations, or independent groups, with their own interests and goals.</p>
-    <a href="#" class="btn btn-primary">Go</a>
-  </div>
-</div>
-</div>
 
-<div class="d-flex" style="height: 200px;"></div>
-
-
+<div class="m-4 mx-auto container px-4">
+  <div class="row gx-5">
+    <div class="col">
+      <div class="card border-top border-2 shadow-lg bg-dark text-white">
+        <h5 class="card-header">Operator</h5>
+        <img src="images/operator_index.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Operators of Terra</h5>
+          <p class="card-text">Notable characters of Arknights used in battle.</p>
+          <a href="{{ route('operator.index') }}" class="col-2 btn btn-light">Go</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card border-top border-2 shadow-lg bg-dark text-white">
+        <h5 class="card-header">Classes</h5>
+        <img src="images/class_index.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Division of Operators</h5>
+          <p class="card-text">Main classes of operators in Arknights.</p>
+          <a href="{{ route('operator_class.index') }}" class="col-2 btn btn-light">Go</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="m-4 mx-auto container px-4">
+  <div class="row gx-5">
+    <div class="col">
+      <div class="card border-top border-2 shadow-lg bg-dark text-white">
+        <h5 class="card-header">Race</h5>
+        <img src="images/race_index.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Inhabitant's Races in Terra</h5>
+          <p class="card-text">Terra is predominantly inhabited by various races known as the Ancients, an amalgamation of humanoids with animal features.</p>
+          <a href="{{ route('race.index') }}" class="col-2 btn btn-light">Go</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card border-top border-2 shadow-lg bg-dark text-white">
+        <h5 class="card-header">Faction</h5>
+        <img src="images/faction_index.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Various Faction in the World of Terra</h5>
+          <p class="card-text">Terra is comprised of several factions, whether nation-states, corporations, or independent groups, with their own interests and goals.</p>
+          <a href="{{ route('faction.index') }}" class="col-2 btn btn-light">Go</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 @endsection
