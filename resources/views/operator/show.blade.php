@@ -19,17 +19,17 @@
         <div class="row mx-auto container overflow-hidden">
 
         
-            <div class="col-3 mx-auto">
+            <div class="col-4 mx-auto">
                 <div class="p-2 text-white rounded bg-dark">
-                    <p class="fs-3">{{ $operator->factions->factionname }}</p>
+                    <p class="fs-3">{{ $operator->operatorFactions->factionname }}</p>
                 </div>
             </div>
-            <div class="col-3 mx-auto">
+            <div class="col-4 mx-auto">
                 <div class="p-2 text-white rounded bg-dark">
-                    <p class="fs-3">{{ $operator->races->name }}</p>
+                    <p class="fs-3">{{ $operator->operatorRaces->name }}</p>
                 </div>
             </div>
-            <div class="col-6 mx-auto">
+            <div class="col-8 mx-auto">
                 <p class="p-2 text-white rounded bg-dark">
                     <p class="fs-3">{{ $operator->description }}</p>
                 </p>
