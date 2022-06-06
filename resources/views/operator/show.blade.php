@@ -20,13 +20,19 @@
 
         
             <div class="col-3 mx-auto">
-                <div class="p-2 text-white rounded bg-dark">Faction</div>
+                <div class="p-2 text-white rounded bg-dark">
+                    <p class="fs-3">{{ $operator->factions->factionname }}</p>
+                </div>
             </div>
             <div class="col-3 mx-auto">
-                <div class="p-2 text-white rounded bg-dark">Race</div>
+                <div class="p-2 text-white rounded bg-dark">
+                    <p class="fs-3">{{ $operator->races->name }}</p>
+                </div>
             </div>
             <div class="col-6 mx-auto">
-                <p class="p-2 text-white rounded bg-dark">Description</p>
+                <p class="p-2 text-white rounded bg-dark">
+                    <p class="fs-3">{{ $operator->description }}</p>
+                </p>
             </div>
         </div>
     </div>
