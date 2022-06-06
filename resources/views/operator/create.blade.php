@@ -18,7 +18,6 @@
 <div class="text-secondary px-5 text-center">
     <div class="py-1">
         <h2 class="display-5 fw-bold text-white">Add New Operator</h2>
-
     </div>
 </div>
 
