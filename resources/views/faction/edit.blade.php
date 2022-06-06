@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>Add New Faction</h2>
+            <h2>Edit Faction</h2>
         </div>
         <div class="pull-right">
             <a class="btn btn-primary" href="{{ route('faction.index') }}"> Back</a>
@@ -22,21 +22,22 @@
 </div>
 @endif
 
-<form action="{{ route('faction.store') }}" method="POST">
+<form action="{{ route('faction.update',$faction->id) }}" method="POST">
     @csrf
 
+    @method('PUT')
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Faction Name:</strong>
-                <input type="text" name="factionname" class="form-control" placeholder="Faction Name">
+                <input type="text" name="factionname" value="{{ $faction->factionname }}" class="form-control" placeholder="Faction Name">
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Type:</strong>
-                <input type="text" name="type" class="form-control" placeholder="Type">
+                <input class="form-control" style="height:150px" name="type" placeholder="Faction Type">{{ $faction->type }}</input>
             </div>
         </div>
 

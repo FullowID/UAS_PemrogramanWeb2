@@ -38,8 +38,8 @@ class FactionController extends Controller
    public function store(Request $request)
    {
        $request->validate([
-           'title' => 'required',
-           'body' => 'required',
+           'factionname' => 'required',
+           'type' => 'required'
        ]);
 
        Faction::create($request->all());
@@ -64,7 +64,7 @@ class FactionController extends Controller
     * @param  \App\Models\Post  $post
     * @return \Illuminate\Http\Response
     */
-   public function edit(Faction $operator_class)
+   public function edit(Faction $faction)
    {
        return view('faction.edit',compact('faction'));
    }
@@ -79,8 +79,8 @@ class FactionController extends Controller
    public function update(Request $request, Faction $faction)
    {
        $request->validate([
-           'title' => 'required',
-           'body' => 'required',
+        'factionname' => 'required',
+        'type' => 'required'
        ]);
 
        $faction->update($request->all());

@@ -39,8 +39,8 @@ class RaceController extends Controller
    public function store(Request $request)
    {
        $request->validate([
-           'title' => 'required',
-           'body' => 'required',
+           'name' => 'required',
+           'description' => 'required'
        ]);
 
        Race::create($request->all());
@@ -80,8 +80,8 @@ class RaceController extends Controller
    public function update(Request $request, Race $race)
    {
        $request->validate([
-           'title' => 'required',
-           'body' => 'required',
+           'name' => 'required',
+           'description' => 'required'
        ]);
 
        $race->update($request->all());

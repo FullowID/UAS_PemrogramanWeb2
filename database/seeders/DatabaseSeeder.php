@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\OperatorClass;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,5 +16,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(FactionSeeder::class);
         $this->call(RaceSeeder::class);
+        $this->call(OperatorClassSeeder::class);
     }
 }
