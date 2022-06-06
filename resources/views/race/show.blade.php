@@ -1,30 +1,32 @@
 @extends('layouts.app')
 @section('content')
 
-    <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2> Show Race</h2>
-            </div>
-            <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('race.index') }}"> Back</a>
-            </div>
+<div class="row">
+    <div class="col-lg-12 m-3">
+        <div class="pull-right">
+            <a class="btn btn-primary" href="{{ route('race.index') }}">Back</a>
         </div>
     </div>
+</div>
 
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Race Name:</strong>
-                {{ $race->name }}
+<div class="text-secondary px-5 text-center">
+    <div class="py-1">
+        <h2 class="display-5 mb-5 fw-bold text-white">{{ $race->name }}</h2>
+
+        <div class="row mx-auto container overflow-hidden">
+
+            <div class="col-5 mx-auto">
+                <p class="p-2 shadow text-white rounded bg-dark">Description</p>
+                <div class="card shadow text-bg-light" style="max-width: 28rem;">
+                    <div class="card-body">
+                        <p>{{$race->description}}</p>
+                    </div>
+                </div>
             </div>
+
         </div>
 
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Description:</strong>
-                {{ $race->description}}
-            </div>
-        </div>
     </div>
+</div>
+
 @endsection
