@@ -7,7 +7,7 @@
                 <h2>Operator</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('operator.create') }}"> Create New Class</a>
+                <a class="btn btn-success" href="{{ route('operator.create') }}">Create New Class</a>
             </div>
         </div>
     </div>

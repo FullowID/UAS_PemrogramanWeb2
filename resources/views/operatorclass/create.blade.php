@@ -7,7 +7,7 @@
             <h2>Add New Operator</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('operator_class.index') }}"> Back</a>
+            <a class="btn btn-primary" href="{{ route('operator_class.index') }}">Back</a>
         </div>
     </div>
 </div>
