@@ -71,7 +71,7 @@
                         <div class="form-group">
                             <label for="description" class="form-label">Description:</label>
                             <textarea class="form-control" name="description" id="description" placeholder="Operator Description" rows="3"></textarea>
-                        
+
                         </div>
                     </div>
 

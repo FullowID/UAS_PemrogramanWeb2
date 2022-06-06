@@ -46,4 +46,5 @@
         </div>
     </div>
 </div>
+<div class="d-flex" style="height: 100px;"></div>
 @endsection
