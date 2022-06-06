@@ -77,7 +77,11 @@ class OperatorController extends Controller
      */
     public function edit(Operator $operator)
     {
-        return view('operator.edit',compact('operator'));
+        $operator_class = OperatorClass::all();
+        $faction = Faction::all();
+        $race = Race::all();
+
+       return view('operator.edit', compact('operator', 'operator_class', 'faction', 'race'));
     }
 
     /**

@@ -10,7 +10,7 @@ class OperatorClass extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name',
+        'classname',
         'position',
         'description'
     ];

@@ -26,7 +26,9 @@ class OperatorClassController extends Controller
      */
     public function create()
     {
-       return view('operatorclass.create');
+        $operator_class = OperatorClass::all();
+
+        return view('operatorclass.create', compact('operator_class'));
     }
 
     /**
@@ -38,8 +40,9 @@ class OperatorClassController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
-            'body' => 'required',
+            'classname' => 'required',
+            'position' => 'required',
+            'description' => 'required'
         ]);
 
         OperatorClass::create($request->all());
