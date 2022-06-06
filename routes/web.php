@@ -26,9 +26,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::resource('/operator_class', OperatorClassController::class);
-Route::resource('/operator', OperatorController::class);
-Route::resource('/faction', FactionController::class);
-Route::resource('/race', RaceController::class);
+Route::resource('/operator_class', OperatorClassController::class)->middleware('auth');
+Route::resource('/operator', OperatorController::class)->middleware('auth');
+Route::resource('/faction', FactionController::class)->middleware('auth');
+Route::resource('/race', RaceController::class)->middleware('auth');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
