@@ -4,8 +4,6 @@ use App\Http\Controllers\FactionController;
 use App\Http\Controllers\OperatorClassController;
 use App\Http\Controllers\OperatorController;
 use App\Http\Controllers\RaceController;
-use App\Models\Operator;
-use App\Models\OperatorClass;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 

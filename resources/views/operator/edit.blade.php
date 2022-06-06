@@ -54,6 +54,7 @@
                         </select>
 
                         <select class="form-control" id="races_id" name="races_id" required="required">
+                            
                             <option value="" selected disabled>Pick a Race</option>
                             @foreach($race as $item)
                             <option value="{{ $item->id }}">{{$item->name}}</option>
@@ -62,7 +63,7 @@
 
                     </div>
 
-                    <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="mb-3 col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <label for="description" class="form-label">Description:</label>
                             <textarea class="form-control" style="height:150px" name="description" id="description" placeholder="Operator Description">{{ $operator->description }}</textarea>

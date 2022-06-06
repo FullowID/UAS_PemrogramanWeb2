@@ -48,10 +48,10 @@
         <td>{{ $item->description }}</td>
         <td>
             <div class="container">
-                <div class="row justify-content-end row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                <div class="col">
 
-                    <a class="btn mx-2 px-2 col btn-info" href="{{ route('operator.show',$item->id) }}">Show</a>
-                    <a class="btn mx-2 px-2 col btn-primary" href="{{ route('operator.edit',$item->id) }}">Edit</a>
+                    <a class="btn my-2 btn-info" href="{{ route('operator.show',$item->id) }}">Show</a>
+                    <a class="btn my-2 btn-primary" href="{{ route('operator.edit',$item->id) }}">Edit</a>
                     <form action="{{ route('operator.destroy',$item->id) }}" method="POST">
 
                         @csrf
