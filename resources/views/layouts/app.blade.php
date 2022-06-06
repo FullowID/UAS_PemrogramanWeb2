@@ -26,7 +26,7 @@
         <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'Arknights') }}
                 </a>
                 <a class="navbar-brand" href="{{ route('operator_class.index') }}">
                     Operator Class

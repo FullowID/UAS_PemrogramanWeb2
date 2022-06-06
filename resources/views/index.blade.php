@@ -43,19 +43,6 @@
 </div>
 
 <div class="d-flex" style="height: 200px;"></div>
-<p>
-  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Button with data-bs-target
-  </button>
-</p>
-<div class="collapse my-3" id="collapseExample">
-  <div class="card card-body">
-  <a href="#!">
-  <img src="{{url('/images/faction/Aegir.webp')}}" class="img-fluid" alt="...">
-  <img src="{{url('/images/faction/Columbia.webp')}}" class="img-fluid" alt="...">
-  </a>
-  </div>
-</div>
 
 
 @endsection
