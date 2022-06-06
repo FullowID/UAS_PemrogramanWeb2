@@ -6,7 +6,7 @@
             <div class="pull-left">
                 <h2> Show Operator Class</h2>
             </div>
-            <div class="pull-right">
+            <div class="pull-left">
                 <a class="btn btn-primary" href="{{ route('operator_class.index') }}"> Back</a>
             </div>
         </div>
