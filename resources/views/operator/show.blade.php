@@ -50,6 +50,4 @@
     </div>
 </div>
 
-<div class="divider py-1"></div>
-
 @endsection
