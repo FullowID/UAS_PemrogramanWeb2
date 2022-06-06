@@ -13,22 +13,22 @@
     <div class="carousel-item active">
       <img src="{{url('/images/slide1.jpg')}}" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+        <h5>Arknights' Catastrophe Messenger</h5>
+        <p>Information and News About Terra.</p>
       </div>
     </div>
     <div class="carousel-item">
       <img src="{{url('/images/slide2.jpg')}}" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+        <h5>Arknights' Catastrophe Messenger</h5>
+        <p>Information and News About Terra.</p>
       </div>
     </div>
     <div class="carousel-item">
       <img src="{{url('/images/slide3.jpg')}}" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
+        <h5>Arknights' Catastrophe Messenger</h5>
+        <p>Information and News About Terra.</p>
       </div>
     </div>
   </div>
@@ -41,20 +41,38 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-
-<div class="d-flex" style="height: 200px;"></div>
-<p>
-  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Button with data-bs-target
-  </button>
-</p>
-<div class="collapse my-3" id="collapseExample">
-  <div class="card card-body">
-  <a href="#!">
-  <img src="{{url('/images/faction/Aegir.webp')}}" class="img-fluid" alt="...">
-  <img src="{{url('/images/faction/Columbia.webp')}}" class="img-fluid" alt="...">
-  </a>
+<div class="card">
+  <h5 class="card-header">Operator</h5>
+  <div class="card-body">
+    <h5 class="card-title">Operators of Terra</h5>
+    <p class="card-text">Notable characters of Arknights used in battle.</p>
+    <a href="#" class="btn btn-primary">Go</a>
   </div>
+</div>
+<div class="card">
+  <h5 class="card-header">Classes</h5>
+  <div class="card-body">
+    <h5 class="card-title">Division of Operators</h5>
+    <p class="card-text">Eight main classes of operators in Arknights.</p>
+    <a href="#" class="btn btn-primary">Go</a>
+  </div>
+</div>
+<div class="card">
+  <h5 class="card-header">Race</h5>
+  <div class="card-body">
+    <h5 class="card-title">Inhabitant's Races in Terra</h5>
+    <p class="card-text">Terra is populated by various races, while some races may be unidentified.</p>
+    <a href="#" class="btn btn-primary">Go</a>
+  </div>
+</div>
+<div class="card">
+  <h5 class="card-header">Faction</h5>
+  <div class="card-body">
+    <h5 class="card-title">Various Faction in the World of Terra</h5>
+    <p class="card-text">Terra is comprised of several factions, whether nation-states, corporations, or independent groups, with their own interests and goals.</p>
+    <a href="#" class="btn btn-primary">Go</a>
+  </div>
+</div>
 </div>
 
 
