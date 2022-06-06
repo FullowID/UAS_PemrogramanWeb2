@@ -6,9 +6,11 @@
             <div class="pull-left">
                 <h2>Operator Class</h2>
             </div>
+            @if (Auth::check())
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('operator_class.create') }}"> Create New Class</a>
             </div>
+            @endif
         </div>
     </div>
 
@@ -23,13 +25,16 @@
             <th>Name</th>
             <th>Position</th>
             <th>Description</th>
+            @if (Auth::check())
             <th>Action</th>
+            @endif
         </tr>
         @foreach ($operator_class as $item)
         <tr>
             <td>{{ $item->classname}}</td>
             <td>{{ $item->position }}</td>
             <td>{{ $item->description }}</td>
+            @if (Auth::check())
             <td>
                  <a class="btn btn-info" href="{{ route('operator_class.show',$item->id) }}">Show</a>
                     <a class="btn btn-primary" href="{{ route('operator_class.edit',$item->id) }}">Edit</a>
@@ -40,6 +45,7 @@
                     <button type="submit" class="btn btn-danger">Delete</button>
                 </form>
             </td>
+            @endif
         </tr>
         @endforeach
     </table>

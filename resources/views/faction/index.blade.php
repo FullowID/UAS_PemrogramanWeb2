@@ -6,9 +6,11 @@
             <div class="pull-left">
                 <h2>Faction</h2>
             </div>
+            @if (Auth::check())
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('faction.create') }}">Create New Faction</a>
             </div>
+            @endif
         </div>
     </div>
 
@@ -22,12 +24,15 @@
         <tr>
             <th>Faction Name</th>
             <th>Type</th>
+            @if (Auth::check())
             <th>Action</th>
+            @endif
         </tr>
         @foreach ($faction as $item)
         <tr>
             <td>{{ $item->factionname}}</td>
             <td>{{ $item->type}}</td>
+            @if (Auth::check())
             <td>
                  <a class="btn btn-info" href="{{ route('faction.show',$item->id) }}">Show</a>
                     <a class="btn btn-primary" href="{{ route('faction.edit',$item->id) }}">Edit</a>
@@ -38,6 +43,7 @@
                     <button type="submit" class="btn btn-danger">Delete</button>
                 </form>
             </td>
+            @endif
         </tr>
         @endforeach
     </table>
