@@ -11,36 +11,31 @@
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="form-group">
-            <strong>Codename:</strong>
-            {{ $operator->codename}}
+      <div class="col-3 mx-auto">
+            <div class="col-3 mx-auto">
+                <div class="p-2 text-white rounded bg-dark">Faction</div>
+                <div class="p-2 text-white rounded bg-dark">
+                    <p class="fs-3">{{ $operator->faction->factionname }}</p>
+                </div>
+            </div>
+            </div>
+            <div class="col-3 mx-auto">
+            <div class="col-3 mx-auto">
+                <div class="p-2 text-white rounded bg-dark">Race</div>
+                <div class="p-2 text-white rounded bg-dark">
+                    <p class="fs-3">{{ $operator->race->name }}</p>
+                </div>
+            </div>
+            </div>
+            <div class="col-6 mx-auto">
+            <div class="col-6 mx-auto">
+                <p class="p-2 text-white rounded bg-dark">Description</p>
+                <p class="p-2 text-white rounded bg-dark">
+                    <p class="fs-3">{{ $operator->description }}</p>
+                </p>
+            </div>
+            </div>
+        </div>
         </div>
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="form-group">
-            <strong>Class:</strong>
-            {{ $operator->operatorClass->classname}}
-        </div>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="form-group">
-            <strong>Factoion:</strong>
-            {{ $operator->faction->factionname}}
-        </div>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="form-group">
-            <strong>Race:</strong>
-            {{ $operator->race->name}}
-        </div>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="form-group">
-            <strong>Description:</strong>
-            {{ $operator->description}}
-        </div>
-    </div>
-</div>
 @endsection
